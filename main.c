@@ -37,10 +37,21 @@ void get_input() {
 }
 
 int main() {
+    char buffer[300];
     printf("Hellow! Welcome to our symptoms checler!\n");
     get_input();
 
     printf("Patient data saved successfully!\n");
+    FILE *fp=popen("./doctors","r");
+    int count=1;
+    while(fgets(buffer,sizeof(buffer),fp)!=NULL){
+        printf("%d %s\n",count,buffer);
+        count++
+    }
+    pclose(fp);
+    int choice;
+    printf("Enter a choice to open ")
+
 
     return 0;
 }
