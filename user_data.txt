@@ -1,3 +1,1 @@
-
-Name: pavi
-Symptoms:3 7 
+pavi 5 4 5 
